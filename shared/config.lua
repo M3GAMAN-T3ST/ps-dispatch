@@ -431,7 +431,18 @@ Config.Blips = {
         sound2 = 'GTAO_FM_Events_Soundset',
         offset = true,
         flash = false
-    }
+    },
+    ['VendingMachineRobbery'] = {     -- MadCap Vending Robbery
+        radius = 120,
+        sprite = 66,
+        color = 5,
+        scale = 1.5,
+        length = 2,
+        sound = 'Lose_1st',
+        sound2 = 'GTAO_FM_Events_Soundset',
+        offset = false,
+        flash = false
+    },
 }
 
 Config.Colors = {
