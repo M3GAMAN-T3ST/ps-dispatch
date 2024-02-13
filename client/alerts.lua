@@ -786,3 +786,21 @@ local function SignRobbery()
     TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
 end
 exports('SignRobbery', SignRobbery)
+
+local function VendingMachineRobbery(camId) -- MadCap Vending Robbery
+    local coords = GetEntityCoords(cache.ped)
+    local dispatchData = {
+        message = "Suspicious Activity Reported",
+        codeName = 'VendingMachineRobbery',
+        code = 'S13P',
+        icon = 'fas fa-question',
+        priority = 2,
+        coords = coords,
+        gender = GetPlayerGender(),
+        street = GetStreetAndZone(coords),
+        camId = camId,
+        jobs = { 'leo' }
+    }
+    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+end
+exports('VendingMachineRobbery', VendingMachineRobbery)
