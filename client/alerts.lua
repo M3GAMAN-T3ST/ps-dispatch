@@ -804,3 +804,51 @@ local function VendingMachineRobbery(camId) -- MadCap Vending Robbery
     TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
 end
 exports('VendingMachineRobbery', VendingMachineRobbery)
+
+-- local function ATMRobbery(camId) -- mk-atmobbery
+--     local currentPos = GetEntityCoords(PlayerPedId())
+--     local locationInfo = getStreetandZone(currentPos)
+--     local gender = GetPedGender()
+--     TriggerServerEvent("dispatch:server:notify", {
+--         dispatchcodename = "atmrobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+--         dispatchCode = "10-90",
+--         firstStreet = locationInfo,
+--         gender = gender,
+--         camId = camId,
+--         model = nil,
+--         plate = nil,
+--         priority = 2, -- priority
+--         firstColor = nil,
+--         automaticGunfire = false,
+--         origin = {
+--             x = currentPos.x,
+--             y = currentPos.y,
+--             z = currentPos.z
+--         },
+--         dispatchMessage = _U('atmrobbery'), -- message
+--         job = { "police" } -- jobs that will get the alerts
+--     })
+-- end
+
+-- exports('ATMRobbery', ATMRobbery)
+
+local function ATMRobbery(camId) -- mk-atmobbery
+    local coords = GetEntityCoords(cache.ped)
+
+    local dispatchData = {
+        message = locale('atmrobbery'),
+        codeName = 'atmrobbery',
+        code = '10-90',
+        icon = 'fas fa-store',
+        priority = 2,
+        coords = coords,
+        gender = GetPlayerGender(),
+        street = GetStreetAndZone(coords),
+        camId = camId,
+        alertTime = nil,
+        jobs = { 'leo' }
+    }
+
+    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+end
+exports('ATMRobbery', ATMRobbery)
