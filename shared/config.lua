@@ -37,7 +37,8 @@ Config.EnableHuntingBlip = false
 
 Config.Locations = {
     ["HuntingZones"] = {
-        [1] = {label = "Hunting Zone", radius = 650.0, coords = vector3(-938.61, 4823.99, 313.92)},
+        [1] = {label = "Hunting Zone", radius = 650.0, coords = vector3(-1186.72, 3853.52, 489.94)},
+        [2] = {label = "Hunting Zone", radius = 650.0, coords = vector3(772.84, 5461.14, 560.18)},
     },
     ["NoDispatchZones"] = {
         [1] = {label = "Ammunation 1", coords = vector3(13.53, -1097.92, 29.8), length = 14.0, width = 5.0, heading = 70, minZ = 28.8, maxZ = 32.8},
@@ -441,6 +442,17 @@ Config.Blips = {
         sound = 'Lose_1st',
         sound2 = 'GTAO_FM_Events_Soundset',
         offset = false,
+        flash = false
+    },
+    ["atmrobbery"] =  { -- mk-atmobbery
+        radius = 0, 
+        sprite = 500, 
+        colour = 1, 
+        scale = 1.5, 
+        length = 2, 
+        sound = "Lose_1st", 
+        sound2 = "GTAO_FM_Events_Soundset", 
+        offset = false, 
         flash = false
     },
 }
