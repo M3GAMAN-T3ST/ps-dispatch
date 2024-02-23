@@ -85,7 +85,9 @@
   "susactivity": "Suspicious Activity",
   "hunting": "Possible Hunting Violation",
   "explosion": "Explosion Reported",
-  "atmrobbery": "ATM Robbery",
+  "atmrobbery": "ATM Robbery In Progress",
+  "signrobbery": "Sign Robbery In Progress",
+  "shoplifting": "Shoplifting In Progress",
 
   "justnow": "just now",
   "minute": "minutes ago",
