@@ -852,3 +852,23 @@ local function ATMRobbery(camId) -- mk-atmobbery
     TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
 end
 exports('ATMRobbery', ATMRobbery)
+
+local function ShopLifting() -- sw-shoplift
+    local coords = GetEntityCoords(cache.ped)
+
+    local dispatchData = {
+        message = locale('shoplifting'),
+        codeName = 'shoplifting',
+        code = '10-10',
+        icon = 'fab fa-store',
+        priority = 2,
+        coords = coords,
+        gender = GetPlayerGender(),
+        street = GetStreetAndZone(coords),
+        alertTime = nil,
+        jobs = { 'leo'}
+    }
+
+    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+end
+exports('ShopLifting', ShopLifting)
