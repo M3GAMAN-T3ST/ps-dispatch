@@ -455,6 +455,17 @@ Config.Blips = {
         offset = false, 
         flash = false
     },
+    ['shoplifting'] = { -- sw-shoplift
+        radius = 0,
+        sprite = 52,
+        color = 1,
+        scale = 1.5,
+        length = 2,
+        sound = 'Lose_1st',
+        sound2 = 'GTAO_FM_Events_Soundset',
+        offset = false,
+        flash = false
+    },
 }
 
 Config.Colors = {
