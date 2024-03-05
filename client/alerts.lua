@@ -288,6 +288,7 @@ end
 exports('PacificBankRobbery', PacificBankRobbery)
 
 local function VangelicoRobbery(camId)
+
     local coords = GetEntityCoords(cache.ped)
 
     local dispatchData = {
@@ -303,7 +304,7 @@ local function VangelicoRobbery(camId)
         alertTime = nil,
         jobs = { 'leo' }
     }
-
+    
     TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
 end
 exports('VangelicoRobbery', VangelicoRobbery)
@@ -369,6 +370,7 @@ end
 exports('DrugSale', DrugSale)
 
 local function SuspiciousActivity()
+
     local coords = GetEntityCoords(cache.ped)
 
     local dispatchData = {
